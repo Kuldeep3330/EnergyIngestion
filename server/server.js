@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 const app = express();
 const PORT = 4000;
 
+app.use(express.json());
+
 mongoose
   .connect("mongodb://127.0.0.1:27017/ingestion_db")
   .then(() => console.log("MongoDB connected"))
