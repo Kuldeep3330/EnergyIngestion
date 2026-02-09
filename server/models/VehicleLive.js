@@ -4,7 +4,8 @@ const VehicleLiveSchema = new mongoose.Schema({
   vehicleId: { type: String, required: true, unique: true },
   soc: Number,
   kwhDeliveredDc: Number,
-  batteryTemp: Number
+  batteryTemp: Number,
+  timestamp: Date
 }, {
     timestamps: true,
     collection: 'vehicle_live' });

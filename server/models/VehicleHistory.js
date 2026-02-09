@@ -5,6 +5,7 @@ const VehicleHistorySchema = new mongoose.Schema({
     soc: Number,
     kwhDeliveredDc: Number,
     batteryTemp: Number,
+    timestamp: { type: Date, required: true, index: true }
 }, { timestamps: true,
     collection: 'vehicle_history'
  })
